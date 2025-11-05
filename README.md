@@ -1,24 +1,24 @@
-# 🧠 Retrieval-Augmented Generation (RAG) System — Nobel Prize 2025 Knowledge Base
+# Retrieval-Augmented Generation (RAG) — Nobel Prize 2025
 
-> **A Python RAG pipeline that retrieves and generates factual answers using Nobel Prize 2025 data.**
-
----
-
-## 📘 Overview
-
-This project implements a **Retrieval-Augmented Generation (RAG)** system — a hybrid of information retrieval and language generation.  
-Instead of relying only on a model’s internal memory, RAG dynamically retrieves relevant text passages from an external dataset before producing an answer.  
-
-The included dataset contains **summarised Nobel Prize 2025 winners and discoveries** in Physics, Chemistry, and Physiology or Medicine.
-
-**Key Highlights**
-- 🔍 Local **semantic search** with FAISS and Sentence-Transformers  
-- 🧠 **Context-aware generation** using OpenAI GPT (or local Flan-T5 fallback)  
-- ⚡ Simple **Streamlit UI** for Q&A  
-- 🌐 **FastAPI backend** for programmatic access  
-- 📚 Custom dataset: Nobel Prize 2025 laureates and achievements  
+A compact Retrieval-Augmented Generation (RAG) system that answers factual questions using a curated **Nobel Prize 2025** dataset.  
+It performs dense retrieval with **FAISS** + **Sentence-Transformers** and generates answers with **OpenAI GPT** (or a local fallback).
 
 ---
 
-## 🏗️ Architecture
+## Overview
+
+Traditional LLMs rely on static pretraining and can miss fresh or domain-specific facts.  
+**RAG** improves factuality by retrieving relevant text from an external corpus and feeding it to the generator.
+
+This repository demonstrates a minimal, production-style RAG pipeline backed by a 2025 Nobel dataset.
+
+---
+
+## Features
+
+- **Semantic retrieval:** FAISS + `all-MiniLM-L6-v2` embeddings  
+- **Generation backends:** OpenAI GPT (if key provided) or local Flan-T5 fallback  
+- **Interfaces:** Streamlit UI, FastAPI REST API, and a simple CLI  
+- **Custom dataset:** Nobel Prize 2025 summaries formatted for precise Q&A  
+- **Local first:** All retrieval runs on your machine (no cloud vector DB required)
 
