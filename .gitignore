@@ -1,0 +1,9 @@
+# virtual environment
+.venv/
+# cache & logs
+__pycache__/
+*.log
+# local data stores
+store/
+# environment secrets
+.env
